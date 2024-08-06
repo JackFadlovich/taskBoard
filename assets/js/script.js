@@ -82,8 +82,10 @@ function handleAddTask(event){
     $('#formModal').modal('hide');}}
 // Todo: create a function to handle deleting a task
 function handleDeleteTask(event){
-
-}
+    let taskId = $(event.target).closest('.task-card').data('id');
+    taskList = taskList.filter(task => task.id !== taskId);
+    localStorage.setItem("tasks", JSON.stringify(taskList));
+    renderTaskList();}
 
 // Todo: create a function to handle dropping a task into a new status lane
 function handleDrop(event, ui) {
