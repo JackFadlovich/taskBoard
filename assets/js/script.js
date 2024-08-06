@@ -59,8 +59,27 @@ $('#in-progress-cards').empty();
         });}
 // Todo: create a function to handle adding a new task
 function handleAddTask(event){
-
-}
+ event.preventDefault();
+  
+  let title = $('#taskTitle').val();
+  let description = $('#taskDescription').val();
+  let dueDate = $('#taskDueDate').val();
+  
+  if (title && dueDate) {
+    let newTask = {
+      id: generateTaskId(),
+      title: title,
+      description: description,
+      dueDate: dueDate,
+      status: "todo"
+    };
+    
+    taskList.push(newTask);
+    localStorage.setItem("tasks", JSON.stringify(taskList));
+    localStorage.setItem("nextId", JSON.stringify(nextId));
+    
+    renderTaskList();
+    $('#formModal').modal('hide');}}
 // Todo: create a function to handle deleting a task
 function handleDeleteTask(event){
 
