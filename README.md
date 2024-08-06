@@ -24,3 +24,12 @@ THEN the task is removed from the task board and will not be added back after re
 
 WHEN I refresh the page
 THEN the saved tasks persist
+
+
+
+RESORCES/CREDIT:
+I used chat GPT for the render task list and making cards dropable
+
+I also used the repo https://github.com/orian42/todolist as a reference so thank you Jason Ryan.
+
+another thankyou to Patrick Quirk for the help.
