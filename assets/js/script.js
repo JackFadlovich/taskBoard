@@ -56,7 +56,10 @@ $('#in-progress-cards').empty();
           revert: "invalid",
           stack: ".task-card",
           cursor: "move"
-        });}
+        });
+        $(".lane").droppable({
+            accept: ".task-card",
+            drop: handleDrop});}
 // Todo: create a function to handle adding a new task
 function handleAddTask(event){
  event.preventDefault();
