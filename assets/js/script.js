@@ -15,7 +15,7 @@ function createTaskCard(task) {
     let card = 
     `<div class="card mb-3 task-card" id="task-${task.id}" data-id="${task.id}">
       <div class="card-body">
-        <h class="card-title">${task.title}</h5>
+        <h5 class="card-title">${task.title}</h5>
         <p class="card-text">${task.description}</p>
         <p class="card-text"><small class="text-muted">Due: ${task.dueDate}</small></p>
         <button class="btn btn-danger btn-sm delete-btn">Delete</button>
